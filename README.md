@@ -1,1 +1,1 @@
-# finanger - mern stack app integrated with plaid api(https://plaid.com)
+# finanger - mern stack app integrated with plaid api
