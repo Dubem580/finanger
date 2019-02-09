@@ -37,7 +37,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
-app.use("api/plaid", plaid);
+app.use("/api/plaid", plaid);
 
 //Serve static content// for deployment to heroku
 if(process.env.NODE_ENV === 'production'){
@@ -50,6 +50,6 @@ if(process.env.NODE_ENV === 'production'){
   });
 }
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

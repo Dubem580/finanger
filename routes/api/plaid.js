@@ -101,7 +101,7 @@ router.delete(
 );
 
 // @route POST api/plaid/accounts/transactions
-// @desc Fetch transactions from past 30 days from all linked accounts
+// @desc Fetch transactions from past 60 days from all linked accounts
 // @access Private
 router.post(
   "/accounts/transactions",
@@ -109,7 +109,7 @@ router.post(
   (req, res) => {
     const now = moment();
     const today = now.format("YYYY-MM-DD");
-    const thirtyDaysAgo = now.subtract(60, "days").format("YYYY-MM-DD");
+    const sixtyDayAgo = now.subtract(60, "days").format("YYYY-MM-DD");
 
     let transactions = [];
 
@@ -121,7 +121,7 @@ router.post(
         const institutionName = account.institutionName;
 
         client
-          .getTransactions(ACCESS_TOKEN, thirtyDaysAgo, today)
+          .getTransactions(ACCESS_TOKEN, sixtyDayAgo, today)
           .then(response => {
             transactions.push({
               accountName: institutionName,

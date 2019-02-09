@@ -1,7 +1,7 @@
 {
-  "name": "mern-auth",
+  "name": "mern-plaid",
   "version": "1.0.0",
-  "description": "Mern Auth Example",
+  "description": "MERN Stack",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -10,11 +10,6 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "proxy": {
-    "/api/*":{
-      "target" : "http://localhost:8000"
-    }
   },
   "author": "",
   "license": "MIT",
@@ -39,4 +34,4 @@
     "redux": "^4.0.1",
     "validator": "^10.9.0"
   }
-}
+  }

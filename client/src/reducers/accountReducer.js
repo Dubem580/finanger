@@ -6,6 +6,7 @@ import {
   GET_TRANSACTIONS,
   TRANSACTIONS_LOADING
 } from "../actions/types";
+
 const initialState = {
   accounts: [],
   transactions: [],
