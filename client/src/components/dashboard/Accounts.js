@@ -111,9 +111,9 @@ class Accounts extends Component {
                 "btn btn-large waves-effect waves-light hoverable blue accent-3 main-btn"
             }}
             plaidLinkProps={{
-              clientName: "YOUR_APP_NAME",
-              key: "YOUR_PUBLIC_KEY",
-              env: "sandbox",
+              clientName: "finanger",
+              key: "38a53964538efc29c40be89832c34c",
+              env: "development",
               product: ["transactions"],
               onSuccess: this.handleOnSuccess
             }}

@@ -11,8 +11,13 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "proxy": {
+    "/api/*":{
+      "target" : "http://localhost:8000"
+    }
+  },
   "author": "",
-  "license": "MIT", 
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
