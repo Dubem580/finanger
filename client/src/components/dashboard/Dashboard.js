@@ -59,7 +59,7 @@ class Dashboard extends Component {
                 }}
                 plaidLinkProps={{
                   clientName: "finanger",
-                  key: "38a53964538efc29c40be89832c34c",
+                  key: "YOUR_PUBLIC_KEY",
                   env: "development",
                   product: ["transactions"],
                   onSuccess: this.handleOnSuccess
