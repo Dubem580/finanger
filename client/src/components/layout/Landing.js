@@ -23,7 +23,7 @@ render() {
               alt="Undraw"
             />
             <h4 className="flow-text">
-              <b>This is a personal banking web app with Plaid built with the </b> {" "}
+              <b>Personal banking web app built with Plaid and the </b> {" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack
             </h4>
             <br />
