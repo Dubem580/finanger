@@ -13,7 +13,7 @@ import {
 export const addAccount = plaidData => dispatch => {
   const accounts = plaidData.accounts;
   axios
-    .post("/api/plaid/accounts/add", plaidData)
+    .post("/api/plaid/accounts/add" + '?nocache=' + new Date().getTime(), plaidData)
     .then(res =>
       dispatch({
         type: ADD_ACCOUNT,
@@ -34,7 +34,7 @@ export const deleteAccount = plaidData => dispatch => {
       account => account._id !== id
     );
     axios
-      .delete(`/api/plaid/accounts/${id}`)
+      .delete(`/api/plaid/accounts/${id}` + '?nocache=' + new Date().getTime(),)
       .then(res =>
         dispatch({
           type: DELETE_ACCOUNT,
@@ -50,7 +50,7 @@ export const deleteAccount = plaidData => dispatch => {
 export const getAccounts = () => dispatch => {
   dispatch(setAccountsLoading());
   axios
-    .get("/api/plaid/accounts")
+    .get("/api/plaid/accounts" + '?nocache=' + new Date().getTime())
     .then(res =>
       dispatch({
         type: GET_ACCOUNTS,
@@ -76,7 +76,7 @@ export const setAccountsLoading = () => {
 export const getTransactions = plaidData => dispatch => {
   dispatch(setTransactionsLoading());
   axios
-    .post("/api/plaid/accounts/transactions", plaidData)
+    .post("/api/plaid/accounts/transactions" + '?nocache=' + new Date().getTime(), plaidData)
     .then(res =>
       dispatch({
         type: GET_TRANSACTIONS,
