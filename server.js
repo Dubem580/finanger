@@ -36,8 +36,8 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Routes
-app.use("/api/users", users);
-app.use("/api/plaid", plaid);
+app.use("/api/users/", users);
+app.use("/api/plaid/", plaid);
 
 //Serve static content// for deployment to heroku
 if(process.env.NODE_ENV === 'production'){
