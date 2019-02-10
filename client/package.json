@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.8.1",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "jwt-decode": "^2.2.0",
@@ -29,7 +28,7 @@
     "extends": "react-app"
   },
   "resolutions": {
-    "ajv": "6.5.5"
+    "ajv": "6.8.1"
   },
   "browserslist": [
     ">0.2%",
