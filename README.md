@@ -1,13 +1,13 @@
 # finanger - mern stack app integrated with plaid api
 
-![Final App](https://finanger.herokuapp.com)
+[finanger app](https://finanger.herokuapp.com)
 
 This project utilizes the following technologies:
 
-- [React] and [React Router]
-- [Node.js] and [Express]
-- [MongoDB]for the database
-- [Redux]
+- React and [React Router]
+- Node.js and Express
+- MongoDBfor the database
+- Redux
 - [Plaid](https://plaid.com) Banking API
 
 ## configuration
@@ -35,7 +35,11 @@ const PLAID_SECRET = "YOUR_SECRET";
 const PLAID_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 ```
 
-2. `client/src/components/dashboard/Dashboard.js` and `client/src/components/dashboard/Accounts.js` - We are only retrieving documents hence ``` product: ["transactions"] ````
+2. `client/src/components/dashboard/Dashboard.js` and `client/src/components/dashboard/Accounts.js` - We are only retrieving transaction data hence 
+
+``` 
+product: ["transactions"] 
+```
 
 ```
 <PlaidLinkButton
